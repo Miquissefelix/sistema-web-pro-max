@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/*componentes do css*/
+@layer components{
+    form input,
+    form textarea,
+    form select{
+        @apply border border-zinc-800 py-1 px-2;
+    }
+    label{
+        @apply font-bold ;
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    .form-group{
+        @apply w-full mb-2;
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    .form-group input{
+        @apply w-full;
+    }
+/*genero*/
+    .form-group input[type="radio"]{
+        @apply w-[unset];
+    }
 }
